@@ -1,3 +1,4 @@
+import { Button } from "antd";
 import React, { useState } from "react";
 
 const State = () => {
@@ -19,4 +20,15 @@ const State = () => {
     <div><button onClick={click}>更新状态</button></div>
   </div>
 }
-export default State;
+
+const StateInit = () => {
+  const [state1, setState1] = useState(0);
+  const [state2, setState2] = useState(state1);
+  return <div>
+    <p>{state1}</p>
+    <p>{state2}</p>
+    <div><Button onClick={() => setState1(state1+ 1)}>更新1</Button></div>
+    <div><Button onClick={() => setState2(state2 + 1)}>更新2</Button></div>
+  </div>
+}
+export default StateInit;
