@@ -16,6 +16,10 @@ class ComChild extends React.Component<{ prop1: number }> {
     console.log('Child UNSAFE_componentWillMount');
   }
 
+  componentWillReceiveProps(nextProps: Readonly<{ prop1: number; }>, nextContext: any): void {
+    console.log('Child componentWillReceiveProps');
+  }
+
   componentDidMount(): void {
     console.log('Child componentDidMount');
   }
@@ -50,10 +54,11 @@ class ComChild extends React.Component<{ prop1: number }> {
   }
 
   render() {
-    return <div>
-      <div>----------Child-----------</div>
-      <button onClick={() => this.setState({ state1: this.state.state1 + 1 }) }>更新</button>
-      <div>{this.props.prop1}</div>
+    console.log('Child render');
+    return <div key="child-div">
+      <div key="child-split">----------Child-----------</div>
+      <button key="child-button" onClick={() => this.setState({ state1: this.state.state1 + 1 }) }>更新</button>
+      <div key="child-prop">{this.props.prop1}</div>
     </div>
   }
 }

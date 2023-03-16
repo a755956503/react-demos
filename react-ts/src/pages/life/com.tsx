@@ -44,16 +44,17 @@ class LifeCom extends React.Component {
     }
   }
 
-  // static getDerivedStateFromProps(nextProps: any, preState: any) {
-  //   console.log('getDerivedStateFromProps');
-  //   return {};
-  // }
+  static getDerivedStateFromProps(nextProps: any, preState: any) {
+    console.log('getDerivedStateFromProps');
+    return {};
+  }
 
   render() {
-    return <div>
-      <button onClick={() => this.setState({ state1: this.state.state1 + 1 }) }>更新</button>
-      <div>{this.state.state1}</div>
-      <ComChild prop1={this.state.state1} />
+    console.log('render');
+    return <div key="parent-div">
+      <button key="parent-button" onClick={() => this.setState({ state1: this.state.state1 + 1 }) }>更新</button>
+      <div key="parent-state">{this.state.state1}</div>
+      <ComChild  key="parent-child" prop1={this.state.state1} />
     </div>
   }
 }
