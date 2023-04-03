@@ -4,12 +4,13 @@ import logo from './logo.svg';
 import './App.css';
 import HookPages from './pages/hooks';
 import LifePages from './pages/life';
-import Antd from './pages/antd';
+import AntdPages from './pages/antd';
 
 function RouteApp() {
   return <Router>
     <HookPages />
     <LifePages />
+    <AntdPages />
   </Router>
 }
 

@@ -28,10 +28,22 @@ commitLayoutEffects
     instance.componentDidUpdate(prevProps, prevState, instance.__reactInternalSnapshotBeforeUpdate);
 
 # hook
+commitBeforeMutationEffects: 异步执行
+  scheduleCallback(NormalPriority$1, function () {
+    flushPassiveEffects();
+    return null;
+  });
+    flushPassiveEffects
+      runWithPriority$1(priorityLevel, flushPassiveEffectsImpl);
+      ...
+      invokePassiveEffectCreate
+        effect.destroy = create();
+
 commitLayoutEffects
   commitLifeCycles
     commitHookEffectListMount
       effect.destroy = create();
+
 
 # 顺序
 getDerivedStateFromProps

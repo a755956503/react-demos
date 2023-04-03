@@ -1,6 +1,6 @@
 import { Button } from "antd";
 import React, { useState } from "react";
-
+import { Breadcrumb  } from 'antd';
 const State = () => {
   const [state1, setState1] = useState<number>(0);
   const [state2, setState2] = useState<number>(0);
@@ -29,6 +29,22 @@ const StateInit = () => {
     <p>{state2}</p>
     <div><Button onClick={() => setState1(state1+ 1)}>更新1</Button></div>
     <div><Button onClick={() => setState2(state2 + 1)}>更新2</Button></div>
+    <Breadcrumb
+      items={[
+        {
+          title: 'Home',
+        },
+        {
+          title: <a href="">Application Center</a>,
+        },
+        {
+          title: <a href="">Application List</a>,
+        },
+        {
+          title: 'An Application',
+        },
+      ]}
+    />
   </div>
 }
 export default StateInit;
