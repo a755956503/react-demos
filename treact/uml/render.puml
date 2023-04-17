@@ -1,0 +1,15 @@
+	
+@startuml
+legacyRenderSubtreeIntoContainer -> legacyCreateRootFromDOMContainer: 创建root
+legacyCreateRootFromDOMContainer --> createContainer: 创建root
+createContainer --> createFiberRoot: 创建RootFiber
+' 初始化executionContext
+legacyRenderSubtreeIntoContainer --> unbatchedUpdates: 初始化
+legacyRenderSubtreeIntoContainer -> updateContainer: 更新Fiber
+' 默认是1或者3
+updateContainer --> requestEventTime: xx
+updateContainer --> requestUpdateLane: xx
+updateContainer --> createUpdate: xx
+updateContainer --> enqueueUpdate: xx
+updateContainer --> scheduleUpdateOnFiber: xx
+@enduml
