@@ -1,0 +1,5 @@
+ensureRootIsScheduled
+  scheduleSyncCallback
+    performSyncWorkOnRoot
+
+flushSyncCallback
