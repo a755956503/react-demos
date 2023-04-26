@@ -29,13 +29,17 @@ scheduleUpdateOnFiber
     或者 scheduleCallback(performConcurrentWorkOnRoot)
       performConcurrentWorkOnRoot
         renderRootConcurrent
-          workLoopConcurrent
+          workLoopConcurrent: 循环
             performUnitOfWork
         performConcurrentWorkOnRoot: 什么情况下会调用
 
 ensureRootIsScheduled
   scheduleCallback(performSyncWorkOnRoot)
   或者 scheduleCallback(performConcurrentWorkOnRoot)
+
+
+performUnitOfWork
+
 
 ## 方法
 legacyRenderSubtreeIntoContainer
@@ -55,6 +59,9 @@ FiberRootNode FiberNode
 
 ReactElement
 将JSX的标签，通过createElement，转换成Element对象
+
+## 组件
+
 
 # 方法
 processUpdateQueue

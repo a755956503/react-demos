@@ -2,18 +2,18 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
-// import HookPages from './pages/hooks';
-// import LifePages from './pages/life';
-// import AntdPages from './pages/antd';
-import ContextPage from './pages/hooks/context';
+import HookPages from './pages/hooks';
+import LifePages from './pages/life';
+import AntdPages from './pages/antd';
+// import ContextPage from './pages/hooks/context';
 
-// function RouteApp() {
-//   return <Router>
-//     <HookPages />
-//     <LifePages />
-//     <AntdPages />
-//   </Router>
-// }
+function RouteApp() {
+  return <Router>
+    <HookPages />
+    <LifePages />
+    <AntdPages />
+  </Router>
+}
 
 // function Child() {
 //   return (
@@ -38,13 +38,13 @@ import ContextPage from './pages/hooks/context';
 //     </div>
 //   );
 // }
-function ContextApp() {
-  return (
-    <div>
-      <ContextPage />
-    </div>
-  )
-}
+// function ContextApp() {
+//   return (
+//     <div>
+//       <ContextPage />
+//     </div>
+//   )
+// }
 
-export default ContextApp;
-// export default AppAntd;
+// export default ContextApp;
+export default RouteApp;
