@@ -21,11 +21,17 @@ commitBeforeMutationEffects
   commitBeforeMutationLifeCycles
      var snapshot = instance.getSnapshotBeforeUpdate(prevProps, prevState);
      instance.__reactInternalSnapshotBeforeUpdate = snapshot;
+  flushPscheduleCallback(NormalPriority$1, function () {
+    flushPassiveEffects();
+    return null;
+  });
+
 
 commitLayoutEffects
   commitLifeCycles
     instance.componentDidMount();  instance === null
     instance.componentDidUpdate(prevProps, prevState, instance.__reactInternalSnapshotBeforeUpdate);
+  commitAttachRef
 
 # hook
 commitBeforeMutationEffects: 异步执行

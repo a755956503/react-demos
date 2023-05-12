@@ -58,8 +58,8 @@ workLoopSync: 循环遍历节点
 
 # 对象
 ## Fiber
+### 属性
 return, child, sibling
-
 alternate: 更新前的对应Fiber，初次更新为null
 stateNode: 执行element，dom是dom元素，组件是组件element
 
@@ -71,6 +71,13 @@ elementType
   dom元素是元素Tag
   内置组件是一个包含$$typeof属性的对象
 
+pendingProps
+dependencies
+ref
+key
+
+lanes
+updateQueue
 
 ## FiberNode和FiberRootNode
 root没有了return、child之类表示顺序的属性，有一个current。

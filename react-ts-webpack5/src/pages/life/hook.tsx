@@ -1,17 +1,13 @@
-import React, {  useEffect, useLayoutEffect, useRef } from 'react';
+import React, {  useEffect, useLayoutEffect } from 'react';
 import HookChild from './hookChild';
 const Hook = () => {
-  const hookRef = useRef();
   useEffect(() => {
     console.log('useEffect');
   });
   useLayoutEffect(() =>{
     console.log('useLayoutEffect');
   });
-  return <div key="parent-div" ref={(ref) => {
-    console.log(ref);
-    hookRef.current = ref as any;
-  }}>
+  return <div key="parent-div">
     <HookChild key="parent-child" />
   </div>
 };
