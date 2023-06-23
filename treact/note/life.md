@@ -26,6 +26,7 @@ commitBeforeMutationEffects
     return null;
   });
 
+commitMutationEffects
 
 commitLayoutEffects
   commitLifeCycles
